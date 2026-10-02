@@ -5,11 +5,11 @@
 Projet frère de [letterboxd-seerr](https://github.com/mat-d3v/letterboxd-seerr), pour IMDb.
 
 <p align="center">
-  <a href="assets/imdb-seerr-presentation.mp4"><img src="assets/demo.gif" width="540" alt="Démo : sur la page IMDb d'une série, le curseur clique sur le bouton orange + Seerr à côté du titre. Un panneau montre la demande envoyée à Seerr avec les saisons 1, 2 et 3, épisodes spéciaux exclus ; le bouton passe au vert (✓ Seerr) et une notification confirme : Added to Seerr, The Quiet Signal."></a>
+  <a href="https://cdn.jsdelivr.net/gh/mat-d3v/imdb-seerr@main/assets/imdb-seerr-presentation.mp4"><img src="assets/demo.gif" width="540" alt="Démo : sur la page IMDb d'une série, le curseur clique sur le bouton orange + Seerr à côté du titre. Un panneau montre la demande envoyée à Seerr avec les saisons 1, 2 et 3, épisodes spéciaux exclus ; le bouton passe au vert (✓ Seerr) et une notification confirme : Added to Seerr, The Quiet Signal."></a>
 </p>
 
 <p align="center">
-  <a href="assets/imdb-seerr-presentation.mp4"><b>▶️ Voir la vidéo de présentation</b></a> (2:29, en anglais, sous-titrée)<br>
+  <a href="https://cdn.jsdelivr.net/gh/mat-d3v/imdb-seerr@main/assets/imdb-seerr-presentation.mp4"><b>▶️ Voir la vidéo de présentation</b></a> (2:29, en anglais, sous-titrée)<br>
   <sub><a href="assets/video-transcript.md">Transcription descriptive</a> (en anglais)</sub>
 </p>
 

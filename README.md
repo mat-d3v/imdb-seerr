@@ -5,11 +5,11 @@
 Sister project of [letterboxd-seerr](https://github.com/mat-d3v/letterboxd-seerr), for IMDb.
 
 <p align="center">
-  <a href="assets/imdb-seerr-presentation.mp4"><img src="assets/demo.gif" width="540" alt="Demo: on an IMDb TV series page, the cursor clicks the orange + Seerr button next to the title. A panel shows the request sent to Seerr with Season 1, 2 and 3 selected and Specials excluded; the button turns green (✓ Seerr) and a notification confirms: Added to Seerr, The Quiet Signal."></a>
+  <a href="https://cdn.jsdelivr.net/gh/mat-d3v/imdb-seerr@main/assets/imdb-seerr-presentation.mp4"><img src="assets/demo.gif" width="540" alt="Demo: on an IMDb TV series page, the cursor clicks the orange + Seerr button next to the title. A panel shows the request sent to Seerr with Season 1, 2 and 3 selected and Specials excluded; the button turns green (✓ Seerr) and a notification confirms: Added to Seerr, The Quiet Signal."></a>
 </p>
 
 <p align="center">
-  <a href="assets/imdb-seerr-presentation.mp4"><b>▶️ Watch the presentation video</b></a> (2:29, English, with captions)<br>
+  <a href="https://cdn.jsdelivr.net/gh/mat-d3v/imdb-seerr@main/assets/imdb-seerr-presentation.mp4"><b>▶️ Watch the presentation video</b></a> (2:29, English, with captions)<br>
   <sub><a href="assets/video-transcript.md">Descriptive transcript</a></sub>
 </p>
 
