@@ -2,7 +2,9 @@
 
 [🇫🇷 Français](README.fr.md) | [🇬🇧 English](README.md)
 
-Projet frère de [letterboxd-seerr](https://github.com/mat-d3v/letterboxd-seerr), pour IMDb.
+Ajoute un bouton **+ Seerr** sur les pages IMDb pour demander des films et des séries en un clic à votre serveur [Seerr](https://seerr.dev), le gestionnaire de demandes pour Plex, Jellyfin et Emby (successeur d'Overseerr et de Jellyseerr).
+
+Projet frère : [letterboxd-seerr](https://github.com/mat-d3v/letterboxd-seerr) fait la même chose sur Letterboxd.
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/mat-d3v/imdb-seerr@main/assets/imdb-seerr-presentation.mp4"><img src="assets/demo.gif" width="540" alt="Démo : sur la page IMDb d'une série, le curseur clique sur le bouton orange + Seerr à côté du titre. Un panneau montre la demande envoyée à Seerr avec les saisons 1, 2 et 3, épisodes spéciaux exclus ; le bouton passe au vert (✓ Seerr) et une notification confirme : Added to Seerr, The Quiet Signal."></a>
@@ -11,6 +13,11 @@ Projet frère de [letterboxd-seerr](https://github.com/mat-d3v/letterboxd-seerr)
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/mat-d3v/imdb-seerr@main/assets/imdb-seerr-presentation.mp4"><b>▶️ Voir la vidéo de présentation</b></a> (2:29, en anglais, sous-titrée)<br>
   <sub><a href="assets/video-transcript.md">Transcription descriptive</a> (en anglais)</sub>
+</p>
+
+<p align="center">
+  <a href="https://raw.githubusercontent.com/mat-d3v/imdb-seerr/main/imdb-seerr.user.js"><img src="https://img.shields.io/badge/Installer-userscript-f97316?style=for-the-badge" alt="Installer le script"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="Licence MIT"></a>
 </p>
 
 ## Langues supportées
@@ -42,6 +49,10 @@ Votre instance Seerr doit être accessible depuis votre navigateur, que ce soit 
 
 > **Note :** `GM_xmlhttpRequest` (utilisé par Tampermonkey) contourne les restrictions mixed content du navigateur, donc HTTP fonctionne parfaitement. Si vous utilisez une extension basée sur `fetch`, HTTPS sera nécessaire.
 
+## Vie privée
+
+L'URL de votre Seerr et votre clé API sont enregistrées uniquement dans le stockage de votre gestionnaire de scripts, sur votre appareil. Le script ne communique qu'avec votre propre serveur Seerr : aucun serveur tiers, aucune statistique.
+
 ## Installation
 
 1. Installez un gestionnaire de userscripts :
@@ -53,13 +64,15 @@ Votre instance Seerr doit être accessible depuis votre navigateur, que ce soit 
 
 3. Ouvrez n'importe quelle page IMDb et cliquez sur le bouton `+ Seerr` : le script vous demande l'URL de votre Seerr (ex : http://192.168.1.x:5055) et votre clé API (Seerr, Paramètres, Général, Clé API) à la première utilisation. C'est tout.
 
+   La première fois, Tampermonkey demande l'autorisation de contacter votre serveur Seerr (requête « cross-origin ») : choisissez **Always allow domain** (toujours autoriser ce domaine), sinon le script ne pourra pas joindre Seerr.
+
 Pour modifier la configuration plus tard : entrée « Configurer Seerr » dans le menu Tampermonkey, ou Maj+clic sur le bouton.
 
 Si votre Seerr a des profils qualité configurés, utilisez les entrées « Choisir le profil qualité par défaut » du menu Tampermonkey pour en sélectionner un. Il est enregistré et appliqué automatiquement à chaque demande. Films et séries se règlent séparément, car ils passent par des services différents (Radarr et Sonarr), chacun avec ses propres profils. Choisissez « Défaut Seerr » pour ne plus rien imposer.
 
 ## Utilisation
 
-Ouvrez n'importe quelle page titre sur IMDb. Un bouton `Seerr` apparaît à côté du titre :
+Ouvrez n'importe quelle page titre sur IMDb. Un bouton `+ Seerr` apparaît à côté du titre :
 
 - **`+ Seerr` orange** : cliquez pour demander le film ou la série sans quitter la page
 - **`✓ Seerr` vert** : déjà demandé
@@ -71,11 +84,16 @@ Si votre Seerr a des tags configurés sur sa connexion Radarr (films) ou Sonarr 
 
 Le script fonctionne dans Safari sur iPhone et iPad avec l'app [Userscripts](https://apps.apple.com/app/userscripts/id1463298887) (gratuite). Il suffit que votre instance Seerr soit joignable depuis l'appareil, par exemple via Tailscale. La configuration se fait au premier appui, comme sur ordinateur.
 
+## Dépannage
+
+- **Le bouton n'apparaît pas** : vérifiez que le script est activé dans votre gestionnaire de scripts et rechargez la page. IMDb change régulièrement sa mise en page : si le bouton n'apparaît toujours pas sur une page titre, ouvrez une issue.
+- **« ❌ Erreur » puis la fenêtre de configuration (code 401 ou 403)** : la clé API est incorrecte ou a été régénérée dans Seerr. Saisissez-la à nouveau.
+- **« ❌ Seerr inaccessible »** : l'URL est incorrecte ou Seerr n'est pas joignable depuis cet appareil (hors de chez vous, vérifiez votre VPN). Ouvrez l'URL dans le navigateur pour tester. Si vous avez refusé la demande d'autorisation de Tampermonkey, autorisez le domaine dans les paramètres du script.
+
 ## Limitations connues
 
 - Pour une série déjà partiellement disponible, le bouton affiche « disponible » ; passez par Seerr pour demander des saisons manquantes précises
-- IMDb change régulièrement la structure de ses pages ; si le bouton n'apparaît plus, ouvrez une issue
 
 ## Licence
 
-MIT
+[MIT](LICENSE)
