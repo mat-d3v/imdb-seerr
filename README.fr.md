@@ -4,7 +4,11 @@
 
 Projet frère de [letterboxd-seerr](https://github.com/mat-d3v/letterboxd-seerr), pour IMDb.
 
-*Captures d'écran à venir.*
+<p align="center">
+  <img src="assets/demo.gif" width="540" alt="Démo : sur la page IMDb d'une série, le curseur clique sur le bouton orange + Seerr à côté du titre. Un panneau montre la demande envoyée à Seerr avec les saisons 1, 2 et 3, épisodes spéciaux exclus ; le bouton passe au vert (✓ Seerr) et une notification confirme : Added to Seerr, The Quiet Signal.">
+</p>
+
+🎬 **[Vidéo de présentation](assets/imdb-seerr-presentation.mp4)** (2:29, en anglais, sous-titrée) · [Transcription descriptive](assets/video-transcript.md) (en anglais)
 
 ## Langues supportées
 
